@@ -14,6 +14,10 @@ app.get('/',(req,res)=>{
     res.render('index.ejs');
 })
 
+app.get('/quizz',(req,res)=>{
+    res.render('quizz.ejs')
+})
+
 
 /* Listener 
 =============== */

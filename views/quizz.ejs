@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Quizz</h1>
+    <main>
+        <h2 class="question"></h2>
+        <form action="" class="answers">
+            <label for="answer-1" class="label-1"></label>
+            <input type="radio" id="html" name="answer" value="HTML" value="answer-3" class="answer-1"><br>
+            <label for="answer-2" class="label-2"></label>
+            <input type="radio" id="css" name="answer" value="CSS" value="answer-3" class="answer-2"><br>
+            <label for="answer-3" class="label-3"></label>
+            <input type="radio" id="javascript" name="answer" value="answer-3" class="answer-3"><br>
+            <label for="answer-4" class="label-4"></label>
+            <input type="radio" id="javascript" name="answer" class="answer-4"><br>
+            <input class="send-btn" type="submit" value="Submit">
+        </form>
+        <div class="result">
+            <h2 class="title"></h2>
+        </div>
+    </main>
+    <script src="../data/QuizzData.js"></script>
+    <script src="../controllers/quizz.js"></script>
+</body>
+</html>

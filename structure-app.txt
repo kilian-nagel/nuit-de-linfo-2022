@@ -1,8 +1,21 @@
 
 Front -
 Accueil 
-Quiz
+Quizz
 Resultats
+
+QUizz
+
+Chronomètre
+
+Questions
+object.
+compteur
+boutons suivant.
+resultat
 
 
 Back -
+
+
+MONGODB_CONNECTION_URI = mongodb+srv://merlanda:cluster/?retryWrites=true&w=majority

@@ -1,0 +1,80 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root {
+    --padding-md : 2rem;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* REset 
+=============== */
+
+button {
+    text-decoration: none;
+    background:none;
+    border: none;
+    color:white;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* nav
+=============== */
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1250px;
+    margin:0 auto;
+    padding:2rem;
+}
+
+#header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header .logo {
+    font-weight: 900;
+    font-size:large;
+}
+
+#header .links {
+    display: flex;
+    list-style-type: none;
+    gap:1rem;
+}
+
+/* HERO 
+=============== */
+
+#hero {
+    max-width: 1250px;
+    margin:0 auto;
+    padding:2rem;
+    background-color: #E63946;
+    color:white;
+}
+
+#hero .title {
+    padding-bottom: 0.5rem;
+}
+
+#hero .cta-btn {
+
+}
+
+#hero .cta-btn {
+    
+}
+
