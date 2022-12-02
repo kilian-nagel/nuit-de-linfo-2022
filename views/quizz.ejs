@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,35 +16,39 @@
         <p class="logo">SIDA Info</p>
         <nav>
             <ul class="links">
-                <li class="link"><a href="../">Accueil</a></li>
-                <li class="link"><a href="/quizz">Quizz</a></li>
-                <li class="link"><a href="">A propos</a></li>
+                <li class="link"><a href="../" aria-label="accéder à l'accueil">Accueil</a></li>
+                <li class="link"><a href="/quizz" aria-label="accéder au quizz">Quizz</a></li>
+                <li class="link"><a href="/apprendre" aria-label="accéder à la section apprendre">A propos</a></li>
             </ul>
         </nav>
+        <nav class="nav-mobile">
+            menu
+            <div class="dropdown">
+                <ul class="links">
+                    <li class="link"><a href="../" aria-label="accéder à l'accueil">Accueil</a></li>
+                    <li class="link"><a href="/quizz" aria-label="accéder au quizz">Quizz</a></li>
+                    <li class="link"><a href="/apprendre" aria-label="accéder à la section apprendre">A propos</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
+    
     <main>
         <div class="questions-header">
-            <h2 class="question"></h2>
+            <h1 class="question"></h1>
             <div class="timer"></div>
         </div>
-        <form action="" class="answers-form">
-            <input type="radio" id="html" name="answer" value="HTML" value="answer-3" class="answer-1">
-            <label for="answer-1" class="label-1"></label><br>
-            <input type="radio" id="css" name="answer" value="CSS" value="answer-3" class="answer-2">
-            <label for="answer-2" class="label-2"></label><br>
-            <input type="radio" id="javascript" name="answer" value="answer-3" class="answer-3">
-            <label for="answer-3" class="label-3"></label><br>
-            <input type="radio" id="javascript" name="answer" class="answer-4">
-            <label for="answer-4" class="label-4"></label><br>
-            <input class="send-btn" type="submit" value="valider">
+        <form action="" class="answers-form" name="questions du quizz">
+            <input type="radio" id="html" name="réponse n°1" value="HTML" value="answer-3" class="answer-1">
+            <label for="answer-1" class="label-1" aria-label="Réponse n°1"></label><br>
+            <input type="radio" id="css" name="réponse n°2" value="CSS" value="answer-3" class="answer-2">
+            <label for="answer-2" class="label-2" aria-label="Réponse n°2"></label><br>
+            <input type="radio" id="javascript" name="réponse n°3" value="réponse-3" class="answer-3">
+            <label for="answer-3" class="label-3" aria-label="Réponse n°3"></label><br>
+            <input type="radio" id="javascript" name="réponse n°4" class="answer-4">
+            <label for="answer-4" class="label-4" aria-label="Réponse n°4"></label><br>
+            <input class="send-btn" type="submit" name="boutton pour valider" value="valider">
         </form>
-        <div class="info-container">
-            <img class="img" src="../media/success.svg" alt="">
-            <div class="content">
-                <h2 class="title">Tu as correctement répondus à la question</h2>
-                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, ipsum, ipsa soluta deserunt commodi laborum sunt nisi quos animi enim aut et! Sit, autem numquam architecto ex et nesciunt ratione?</p>
-            </div>
-        </div>
         <div class="result">
             <h2 class="title"></h2>
         </div>
@@ -52,5 +56,6 @@
     <script src="../data/QuizzData.js"></script>
     <script src="../controllers/quizz.js"></script>
     <script src="../controllers/timer.js"></script>
+    <script src="../controllers/request.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,46 +9,56 @@
     <title>Document</title>
 </head>
 <body>
-    <header id="header">
+    <header id="header" name="header, most links are here">
         <p class="logo">SIDA Info</p>
         <nav>
             <ul class="links">
-                <li class="link"><a href="../">Accueil</a></li>
-                <li class="link"><a href="/quizz">Quizz</a></li>
-                <li class="link"><a href="">A propos</a></li>
+                <li class="link"><a href="../" aria-label="accéder à l'accueil">Accueil</a></li>
+                <li class="link"><a href="/quizz" aria-label="accéder au quizz">Quizz</a></li>
+                <li class="link"><a href="/apprendre"aria-label="accéder à la section">Apprendre</a></li>
             </ul>
         </nav>
+        <nav class="nav-mobile">
+            menu
+            <div class="dropdown" role="navigation">
+                <ul class="links">
+                    <li class="link"><a href="../" aria-label="accéder à la section accueil">Accueil</a></li>
+                    <li class="link"><a href="/quizz"  aria-label="accéder à la section quizz">Quizz</a></li>
+                    <li class="link"><a href="/apprendre"  aria-label="accéder à la section apprendre">A propos</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <main>
+    <main id="apprendre">
         <div class="container">
             <div class="profile">
-                <img src="../media/learn.svg" width="200" alt="image du conseille">
+                <img src="../media/learn.svg" width="200" alt="image d'homme" aria-label="image d'un homme">
             </div>
             <div class="text-box">
-                <h2 class="title"></h2>
+                <h1 class="title">Apprenez en plus sur la sexualité</h1>
                 <p class="text">
                     Bonjour je suis John , je suis un expert en éducation sexuelle et je m'y connais également dans les risques et problématiques liées à la sexualité. Avez-vous une question en particulier à me poser ?</p>
             </div>
             <div class="buttons">
-                <button class="btn-vih"><a class="link">VIH</a></button>
-                <button class="btn-sida"><a class="link">SIDA</a></button>
-                <button class="btn-dangers"><a class="link">Dangers de la sexualité</a></button>
+                <button class="btn-vih"><a class="link" aria-label="afficher le contenu correspondant au vih"><u>VIH</u></a></button>
+                <button class="btn-sida"><a class="link" aria-label="afficher le contenu correspondant au sida"><u>SIDA</u></a></button>
+                <button class="btn-dangers"><a class="link" aria-label="afficher le contenu correspondant aux mst"><u>MST</u></a></button>
             </div>
         </div>
         <div class="container vih">
             <div class="profile">
-                <img src="../media/learn.svg" width="200" alt="image du conseille">
+                <img src="../media/learn.svg" width="200" alt="image d'homme" aria-label="image d'un homme">
             </div>
             <div class="text-box">
                 <h2 class="title">VIH</h2>
                 <p class="text">
                     Tu souhaites donc en savoir plus sur le VIH.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur numquam adipisci labore dolore, iure itaque in. At provident excepturi velit magnam unde autem hic, voluptatem et ad deleniti esse eius.</p>
+                    Le Virus de l’Immunodéficience Humaine provoque une infection virale qui attaque le système immunitaire (système complexe de défense de l'organisme contre les maladies) et l'empêche de fonctionner correctement. Une personne séropositive est porteuse du VIH. Elle peut le transmettre même sans avoir de symptômes de maladie.</p>
             </div>
         </div>
         <div class="container sida">
             <div class="profile">
-                <img src="../media/learn.svg" width="200" alt="image du conseille">
+                <img src="../media/learn.svg" width="200" alt="image d'homme" aria-label="image d'un homme">
             </div>
             <div class="text-box">
                 <h2 class="title">SIDA</h2>
@@ -58,12 +68,17 @@
         </div>
         <div class="container dangers">
             <div class="profile">
-                <img src="../media/learn.svg" width="200" alt="image du conseille">
+                <img src="../media/learn.svg" width="200" alt="image d'homme" aria-label="image d'un homme">
             </div>
             <div class="text-box">
-                <h2 class="title">Dangers liées à la sexualité</h2>
+                <h2 class="title">MST</h2>
                 <p class="text">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur numquam adipisci labore dolore, iure itaque in. At provident excepturi velit magnam unde autem hic, voluptatem et ad deleniti esse eius.</p>
+                    C'est une bonne question , il est important de savoir ce que sont les MST.
+                    Les infections sexuellement transmissibles (IST), autrefois appelées maladies sexuellement transmissibles (MST), sont des infections pouvant être transmises lors des relations sexuelles, avec ou sans pénétration. Il existe plus d'une trentaine d'IST.
+
+                    Les IST ont des répercussions sur la santé, sur la vie sexuelle, sur la fertilité et fréquemment sur l'enfant à venir lorsqu'elles surviennent au cours de la grossesse.
+                    
+                    Les IST sont provoquées par des agents infectieux. Il peut s'agir de virus, de bactéries ou de parasites..</p>
             </div>
         </div>
         <script src="../controllers/apprendre.js"></script>

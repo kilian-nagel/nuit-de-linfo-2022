@@ -79,3 +79,13 @@ form .send-btn {
     font-weight: 900;
     font-size: 2rem;
 }
+
+@media screen and (max-width:576px) {
+    main {padding:0;}
+    .questions-header , .answers-form , .result {
+        padding:2rem;
+    }
+    .questions-header {padding-bottom: 0;}
+    .answers-form {border-radius: 0;}
+    .result .title,  main .question {font-size: 1.4rem;}
+}

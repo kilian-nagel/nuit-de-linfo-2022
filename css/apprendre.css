@@ -12,7 +12,11 @@ a {
     color:black;
 }
 
-.container {
+#apprendre {
+    padding:2rem;
+}
+
+#apprendre .container {
     max-width: 1250px;
     margin: 0 auto;
     margin-top:5rem;
@@ -22,16 +26,16 @@ a {
     gap:4rem;
 }
 
-.container .title {
+#apprendre .container .title {
     padding-bottom: 0.65rem;
     font-weight: 900;
 }
 
-.container .text {
+#apprendre .container .text {
     max-width: 600px;
     font-weight: 400;
 }
 
-.container.vih , .container.sida , .container.dangers {
+#apprendre .container.vih , #apprendre .container.sida , #apprendre .container.dangers {
     display: none;
 }

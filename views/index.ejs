@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,47 +11,74 @@
     <title>Document</title>
 </head>
 <body>
+    <ul class="liens-evitements">
+        <li><a href="#home"></a></li>
+        <li><a href="#hero"></a></li>
+        <li><a href="#presentation"></a></li>
+        <li><a href="#apprendre"></a></li>
+    </ul>
     <header id="header">
         <p class="logo">SIDA Info</p>
         <nav>
             <ul class="links">
                 <li class="link"><a href="../">Accueil</a></li>
                 <li class="link"><a href="/quizz">Quizz</a></li>
+                <li class="link"><a href="/apprendre">Apprendre</a></li>
                 <li class="link"><a href="">A propos</a></li>
             </ul>
+        </nav>
+        <nav class="nav-mobile">
+            menu
+            <div class="dropdown">
+                <ul class="links">
+                    <li class="link"><a href="../" aria-label="accéder à l'accueil">Accueil</a></li>
+                    <li class="link"><a href="/quizz" aria-label="accéder au quizz">Quizz</a></li>
+                    <li class="link"><a href="/apprendre" aria-label="accéder à la section apprendre">Apprendre</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <main>
+        <section class="home" id="home">
+            <div class="container">
+                <h2 class="title">Découvrer la sexualité sous un autre angle.</h2>
+                <p class="text">Il s'agit d'une occasion unique pour décrouvrir et apprendre de nombreuses choses sur des sujets souvent tabou.</p>
+                <button><a href="/apprendre" aria-label="accéder à la section apprendre">Apprendre</a></button>
+            </div>
+            <div class="img-wrapper">
+                <img width="300" src="../media/discover.svg" alt="image de l'espace" aria-label="image de l'espace">
+            </div>
+        </section>
         <section class="hero" id="hero">
             <h1 class="title">SIDA Info , Le Quizz fun !</h1>
-            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem quisquam corrupti explicabo facere iure cum temporibus alias error totam eos voluptatem in earum doloribus iusto dolor, sunt veritatis natus! Ab?</p>
+            <p class="text">Il s'agit d'un simple quizz de 4 questions pour tester vos conaissances sur le sida et la sexualité</p>
             <div class="preview">
                 <div class="card"></div>
                 <div class="card"></div>
                 <div class="card"></div>
             </div>
-            <button class="cta-btn"><a href="/quizz">Lancer le quizz !</a></button>
+            <button class="cta-btn"><a href="/quizz" aria-label="Démarrer le quizz">Lancer le quizz !</a></button>
         </section>
-        <section class="presentation">
+        <section class="presentation" id="presentation">
             <div class="container">
                 <h2 class="title">Voici la cause que nous défendons</h2>
                 <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam maxime recusandae expedita repellendus illum sequi repellat blanditiis enim at ipsa? Praesentium error laudantium aut nobis. Praesentium quo nihil voluptatem debitis.</p>
             </div>
-            <video width="400" height="579" controls autoplay>
+            <video width="400" height="579" controls autoplay  aria-label="vidéo concernant concernant le sida">
                 <source src="../media/video-presentation.mp4" type="video/mp4">
                 <source src="../media/video-presentation.mp4" type="video/ogg">
               Your browser does not support the video tag.
               </video>
         </section>
-        <section class="learn">
+        <section class="learn" id="apprendre">
             <div class="container">
                 <h2 class="title">Apprendre les bases de la sexualité</h2>
                 <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, consectetur, accusamus aperiam officia facilis distinctio hic, consequatur placeat ab corrupti eaque culpa quibusdam temporibus tempore a maxime! Animi, quas sequi.</p>
-                <button><a href="/apprendre">Apprendre</a></button>
+                <button><a href="/apprendre" aria-label="accéder à la section apprendre">Apprendre</a></button>
             </div>
             <div class="img-wrapper">
-                <img width="300" src="../media/learn.svg" alt="">
+                <img width="300" src="../media/learn.svg" alt="image d'homme" aria-label="image d'un homme">
             </div>
         </section>
     </main>

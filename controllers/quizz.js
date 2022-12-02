@@ -2,6 +2,7 @@
 let score = 0;
 let count = 0;
 let hasQuizTimedOut = false;
+let data = []
 
 function displayQuizz(){
     let question = document.querySelector("main .question");
@@ -31,6 +32,7 @@ function handleClick(e){
 }
 
 function displayScore(){
+    sendData(score)
     hideTime();
     let scoreEl = document.querySelector('.result .title');
     let form = document.querySelector('.answers-form');
@@ -46,6 +48,13 @@ function updateScore(){
     let answervalue3 = document.querySelector("main .answer-3").checked;
     let answervalue4 = document.querySelector("main .answer-4").checked;
     let answers = [answerValue1,answerValue2,answervalue3,answervalue4];
+    data.push({"question":questions[count],answers:[
+        [document.querySelector("main .answer-1").innerHTML,questions[count].answers[0][1]],
+        [document.querySelector("main .answer-2").innerHTML,questions[count].answers[1][1]],
+        [document.querySelector("main .answer-3").innerHTML,questions[count].answers[2][1]],
+        [document.querySelector("main .answer-4").innerHTML,questions[count].answers[3][1]]
+    ]})
+    console.log(data);
     answers.forEach((answer,i)=>{
         console.log(answer,questions[count].answers[i][1]);
         if(answer==true && true==questions[count].answers[i][1]){
