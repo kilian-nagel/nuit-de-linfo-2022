@@ -25,8 +25,8 @@ app.get('/apprendre',(req,res)=>{
     res.render('apprendre.ejs');
 });
 
-app.get('/score', async (req,res) =>{
-    await scoreboard.addScore(res)
+app.get('/score', (req,res) =>{
+    scoreboard.addScore(res)
 })
 
 
