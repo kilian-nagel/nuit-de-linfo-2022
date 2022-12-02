@@ -4,31 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/quizz.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <h1>Quizz</h1>
+    <header id="header">
+        <p class="logo">SIDA Info</p>
+        <nav>
+            <ul class="links">
+                <li class="link"><a href="../">Accueil</a></li>
+                <li class="link"><a href="/quizz">Quizz</a></li>
+                <li class="link"><a href="">A propos</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <h2 class="question"></h2>
-        <form action="" class="answers">
-            <label for="answer-1" class="label-1"></label>
-            <input type="radio" id="html" name="answer" value="HTML" value="answer-3" class="answer-1"><br>
-            <label for="answer-2" class="label-2"></label>
-            <input type="radio" id="css" name="answer" value="CSS" value="answer-3" class="answer-2"><br>
-            <label for="answer-3" class="label-3"></label>
-            <input type="radio" id="javascript" name="answer" value="answer-3" class="answer-3"><br>
-            <label for="answer-4" class="label-4"></label>
-            <input type="radio" id="javascript" name="answer" class="answer-4"><br>
-            <input class="send-btn" type="submit" value="Submit">
+        <div class="questions-header">
+            <h2 class="question"></h2>
+            <div class="timer"></div>
+        </div>
+        <form action="" class="answers-form">
+            <input type="radio" id="html" name="answer" value="HTML" value="answer-3" class="answer-1">
+            <label for="answer-1" class="label-1"></label><br>
+            <input type="radio" id="css" name="answer" value="CSS" value="answer-3" class="answer-2">
+            <label for="answer-2" class="label-2"></label><br>
+            <input type="radio" id="javascript" name="answer" value="answer-3" class="answer-3">
+            <label for="answer-3" class="label-3"></label><br>
+            <input type="radio" id="javascript" name="answer" class="answer-4">
+            <label for="answer-4" class="label-4"></label><br>
+            <input class="send-btn" type="submit" value="valider">
         </form>
+        <div class="info-container">
+            <img class="img" src="../media/success.svg" alt="">
+            <div class="content">
+                <h2 class="title">Tu as correctement répondus à la question</h2>
+                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, ipsum, ipsa soluta deserunt commodi laborum sunt nisi quos animi enim aut et! Sit, autem numquam architecto ex et nesciunt ratione?</p>
+            </div>
+        </div>
         <div class="result">
             <h2 class="title"></h2>
         </div>
     </main>
     <script src="../data/QuizzData.js"></script>
     <script src="../controllers/quizz.js"></script>
+    <script src="../controllers/timer.js"></script>
 </body>
 </html>

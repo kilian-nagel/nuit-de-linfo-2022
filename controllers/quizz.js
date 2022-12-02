@@ -1,6 +1,7 @@
 
 let score = 0;
 let count = 0;
+let hasQuizTimedOut = false;
 
 function displayQuizz(){
     let question = document.querySelector("main .question");
@@ -8,6 +9,8 @@ function displayQuizz(){
     let answer2 = document.querySelector("main .label-2");
     let answer3 = document.querySelector("main .label-3");
     let answer4 = document.querySelector("main .label-4");
+    console.log(count);
+    console.log(questions[count]);
     question.innerHTML = questions[count].question;
     answer1.innerHTML = questions[count].answers[0][0];
     answer2.innerHTML = questions[count].answers[1][0];
@@ -16,21 +19,25 @@ function displayQuizz(){
 }
 
 function handleClick(e){
+    count++;
     e.preventDefault();
-    console.log(score);
-    if(count<3){
+    if(count<4){
         updateScore()
         displayQuizz();
     }else {
         console.log(score);
         displayScore();
     }
-    count++;
 }
 
 function displayScore(){
+    hideTime();
     let scoreEl = document.querySelector('.result .title');
-    scoreEl.innerHTML = ' Tu as '+score+" réponses justes sur 4"
+    let form = document.querySelector('.answers-form');
+    let title = document.querySelector('.question');
+    title.style.display = 'none';
+    form.style.display= 'none';
+    scoreEl.innerHTML =  `${hasQuizTimedOut ? "Le temps est écoulé.<br><br>":""}Tu as ${score} réponse(s) justes sur 4`;
 }
 
 function updateScore(){
@@ -40,7 +47,6 @@ function updateScore(){
     let answervalue4 = document.querySelector("main .answer-4").checked;
     let answers = [answerValue1,answerValue2,answervalue3,answervalue4];
     answers.forEach((answer,i)=>{
-        console.log(questions[count].answers[i]);
         console.log(answer,questions[count].answers[i][1]);
         if(answer==true && true==questions[count].answers[i][1]){
             score++;
@@ -53,8 +59,6 @@ function initListeners(){
     let button = document.querySelector("main .send-btn");
     button.addEventListener("click",handleClick);
 }
-
-console.log(score);
 
 initListeners();
 displayQuizz();

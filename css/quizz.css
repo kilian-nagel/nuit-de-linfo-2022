@@ -1,0 +1,81 @@
+
+main {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}
+
+main .question {
+    font-size:2rem;
+    font-weight: 900;
+}
+
+/* Form
+=============== */
+
+
+.questions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form {
+    padding:2rem;
+    margin-top: 2rem;
+    background-color: #E63946;
+    border-radius: 16px;
+}
+
+form label {
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}
+
+form .send-btn {
+    background-color: white;
+    border-radius: 8px;
+    padding: 0.5rem;
+    margin-top:0.75rem;
+    border: none;
+}
+
+form .send-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}
+
+/* Info box 
+=============== */
+
+.info-container {
+    display: flex;
+    display: none;
+    padding: 2rem;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.info-container .content .title {
+    font-weight: 900;
+}
+
+.info-container .content .text {
+    font-weight: 400;
+}
+
+.info-container .img {
+    background: url('../media/success.svg') center/cover;
+    width:200px;
+}
+
+/* Result
+=============== */
+
+.result .title {
+    font-weight: 900;
+    font-size: 2rem;
+}

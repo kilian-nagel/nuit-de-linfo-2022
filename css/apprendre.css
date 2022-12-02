@@ -1,0 +1,37 @@
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    width:200px;
+}
+
+a {
+    color:black;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    margin-top:5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:4rem;
+}
+
+.container .title {
+    padding-bottom: 0.65rem;
+    font-weight: 900;
+}
+
+.container .text {
+    max-width: 600px;
+    font-weight: 400;
+}
+
+.container.vih , .container.sida , .container.dangers {
+    display: none;
+}
