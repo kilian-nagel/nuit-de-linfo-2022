@@ -39,10 +39,6 @@ async function fillQuiz() {
             console.log(parseData[i]['question'])
         }
     });
-
-    // list = JSON.parse("./data/quiz" + quiz_number)
-    // list.forEach(element => {
-    //     console.log(element)});
 }
 
 exports.fillQuiz = fillQuiz

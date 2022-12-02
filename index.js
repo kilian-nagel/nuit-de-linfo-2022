@@ -28,6 +28,6 @@ app.get('/apprendre',(req,res)=>{
 /* Listener 
 =============== */
 
-app.listen(process.env.IP, process.env.PORT);
+app.listen(process.env.PORT, process.env.IP);
 
 quiz.fillQuiz()
