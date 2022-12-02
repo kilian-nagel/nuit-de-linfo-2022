@@ -2,6 +2,8 @@ const body_parser = require('body-parser');
 const express = require('express');
 const ejs = require('ejs');
 const app = express();
+const quiz = require("./models/quiz_db")
+require("dotenv").config()
 
 /* MiddleWares 
 =============== */
@@ -26,4 +28,6 @@ app.get('/apprendre',(req,res)=>{
 /* Listener 
 =============== */
 
-app.listen(3000);
+app.listen(process.env.IP, process.env.PORT);
+
+quiz.fillQuiz()
