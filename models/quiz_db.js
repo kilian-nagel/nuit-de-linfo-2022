@@ -1,46 +1,43 @@
-const mong = require('mongoose')
-const fs   = require('fs')
-const path = require('path')
-const dataDir = 'data'
+const {MongoClient}      = require('mongodb')
+const fs        = require('fs')
+const path      = require('path')
+const dataDir   = 'data'
 
 require("dotenv").config()
 
 const mongUser = process.env.mongouser
 const mongPwd = process.env.mongoPwd
-const mongoUrl = `mongodb+srv://${mongUser}:${mongPwd}@ndli.bksxxqh.mongodb.net/quiz_ndli?retryWrites=true&w=majority`
-
-const states = ["Disconnected","Connected", "Connecting", "Disconnecting"]
+const mongoUrl = `mongodb+srv://${mongUser}:${mongPwd}@ndli.bksxxqh.mongodb.net/?retryWrites=true&w=majority`
+const client = new MongoClient(mongoUrl)
 
 
 async function mongConnect() {
-    await mong.connect(mongoUrl).catch(error => {
-        console.log("[Error]: " + error)
-    })
-    if (mong.connection.readyState > 4) {
-        console.log("Can't get mongoDB connection status")
-    } else {
-        console.log(states[mong.connection.readyState])
+    try {
+        await client.connect()
+        await client.db("quiz_ndli").command({ ping: 1 });
+        console.log("Connected");
+    }finally {
+        await client.close();
     }
-    return mong
 }
 
-const q_schema = new mong.Schema({
-    question: String,
-    answer: [{ rep: String, isRepTrue: Boolean }],
-    truePercent: {type : Number, default: 0}
-})
+const db = client.db('NDLI')
 
 async function fillQuiz() {
     const data = fs.readdirSync(dataDir).filter(file => path.extname(file) ==='.json')
-    data.forEach(element => {
+    let count = await db.stats().then( element => {
+        return element.collections
+    })
+    data.forEach( async element => {
+        const collec = db.collection('quiz_ndli_' + (count + 1))
         const data = fs.readFileSync(`${dataDir}/${element}`)
-        const parseData = JSON.parse(data)
-        for (let i = 1; i < Object.keys(parseData).length; i++) {
-            console.log(parseData[i]['question'])
-        }
+        const parsedData = JSON.parse(data)
+        count++
+        await collec.insertMany(parsedData)
+        console.log("Inserted")
     });
 }
 
 exports.fillQuiz = fillQuiz
 exports.mongConnect = mongConnect
-exports.mong = mong
+exports.db = db

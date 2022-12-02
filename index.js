@@ -3,6 +3,7 @@ const express = require('express');
 const ejs = require('ejs');
 const app = express();
 const quiz = require("./models/quiz_db")
+const scoreboard = require("./routes/scoreboard")
 require("dotenv").config()
 
 /* MiddleWares 
@@ -24,10 +25,17 @@ app.get('/apprendre',(req,res)=>{
     res.render('apprendre.ejs');
 });
 
+app.get('/score', (req,res) =>{
+    
+})
+
 
 /* Listener 
 =============== */
 
 app.listen(process.env.PORT, process.env.IP);
 
+quiz.mongConnect().catch(console.dir)
 quiz.fillQuiz()
+
+scoreboard.addScore()
