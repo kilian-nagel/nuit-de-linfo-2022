@@ -36,6 +36,20 @@ a {
     font-weight: 400;
 }
 
+#apprendre .buttons button {
+    padding:0.5rem;
+    border-radius: 8px;
+    background-color: #E63946;
+    margin-top: 1rem;
+}
+
+#apprendre .buttons button a {
+    text-decoration: none;
+    color:white;
+    font-family: 'Poppins','sans-serif';
+    font-weight: 900;
+}
+
 #apprendre .container.vih , #apprendre .container.sida , #apprendre .container.dangers {
     display: none;
 }
