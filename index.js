@@ -25,8 +25,8 @@ app.get('/apprendre',(req,res)=>{
     res.render('apprendre.ejs');
 });
 
-app.get('/score', (req,res) =>{
-    
+app.get('/score', async (req,res) =>{
+    await scoreboard.addScore(res)
 })
 
 
@@ -37,5 +37,3 @@ app.listen(process.env.PORT, process.env.IP);
 
 quiz.mongConnect().catch(console.dir)
 quiz.fillQuiz()
-
-scoreboard.addScore()

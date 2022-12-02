@@ -1,4 +1,4 @@
-const quiz = require('./quiz_db')
+const quiz = require('../models/quiz_db')
 
 const db = quiz.db
 const collec = db.collection("scoreboard")
